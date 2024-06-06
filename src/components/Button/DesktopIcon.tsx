@@ -20,7 +20,7 @@ const DesktopIconContainer = styled.button`
   margin: ${Spaces.md};
   &:hover {
     cursor: pointer;
-    border: 1px solid black;
+    filter: drop-shadow(3px 3px 3px ${Colors.primaryDarker});
   }
 `;
 
