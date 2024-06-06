@@ -8,7 +8,7 @@ export const Colors = {
   transparent: "transparent",
 } as const;
 
-export const Sizes = {
+export const Spaces = {
   sm: "8px",
   md: "16px",
   lg: "24px",

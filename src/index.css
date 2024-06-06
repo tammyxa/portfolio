@@ -24,11 +24,13 @@ a:hover {
 
 body,
 html,
-input {
+input,
+button {
   font-family: "Sunflower", sans-serif;
   line-height: 1.5;
   font-weight: 500;
   font-style: normal;
+  font-size: 16px;
 }
 
 body {
@@ -44,7 +46,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -74,4 +76,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
