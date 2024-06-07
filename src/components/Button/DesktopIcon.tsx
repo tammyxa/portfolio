@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Colors, Spaces } from "../../theme";
+import { useState } from "react";
+import { PopUpWindow } from "../../modules";
 
 interface DesktopIconProps {
   icon: string;
@@ -25,10 +27,19 @@ const DesktopIconContainer = styled.button`
 `;
 
 export const DesktopIcon = ({ icon, name }: DesktopIconProps) => {
+  const [open, setOpen] = useState(false);
+
+  const handleIconClick = () => {
+    setOpen(true);
+  };
+
   return (
-    <DesktopIconContainer>
-      <img src={icon}></img>
-      <span>{name}</span>
-    </DesktopIconContainer>
+    <>
+      <DesktopIconContainer onClick={handleIconClick}>
+        <img src={icon}></img>
+        <span>{name}</span>
+      </DesktopIconContainer>
+      {open && <PopUpWindow isOpen={open} setIsOpen={setOpen} />}
+    </>
   );
 };
