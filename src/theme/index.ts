@@ -14,3 +14,9 @@ export const Spaces = {
   md: "16px",
   lg: "24px",
 } as const;
+
+export const FontSizes = {
+  sm: "16px",
+  md: "24px",
+  lg: "36px",
+} as const;
