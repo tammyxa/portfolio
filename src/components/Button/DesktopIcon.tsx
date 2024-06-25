@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colors, Spaces } from "../../theme";
 import { useState } from "react";
-import { PopUpWindow } from "../../modules";
+import { ProfileWindow } from "../ProfileWindow";
 
 interface DesktopIconProps {
   icon: string;
@@ -28,9 +28,12 @@ const DesktopIconContainer = styled.button`
 
 export const DesktopIcon = ({ icon, name }: DesktopIconProps) => {
   const [open, setOpen] = useState(false);
+  const [application, setApplication] = useState("");
 
   const handleIconClick = () => {
     setOpen(true);
+    setApplication(name);
+    console.log("Dsa");
   };
 
   return (
@@ -39,7 +42,9 @@ export const DesktopIcon = ({ icon, name }: DesktopIconProps) => {
         <img src={icon}></img>
         <span>{name}</span>
       </DesktopIconContainer>
-      {open && <PopUpWindow isOpen={open} setIsOpen={setOpen} />}
+      {open && application && application === "Profile" ? (
+        <ProfileWindow />
+      ) : null}
     </>
   );
 };

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { Colors, Spaces } from "../../theme";
+import { useState } from "react";
 
 interface PopUpWindowProps {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
+  children?: React.ReactNode;
 }
 
-const Window = styled.div`
+const Window = styled.div<{ isOpen: boolean }>`
   min-width: 30%;
   min-height: 30%;
   background-color: ${Colors.primaryLight};
@@ -14,6 +14,7 @@ const Window = styled.div`
   inset: 50% auto auto 50%;
   transform: translate(-50%, -50%);
   filter: drop-shadow(1px 1px 3px ${Colors.primaryDark});
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
 `;
 
 const Toolbar = styled.div`
@@ -26,25 +27,24 @@ const Toolbar = styled.div`
   padding: ${Spaces.sm};
 `;
 
-export const PopUpWindow = ({ isOpen, setIsOpen }: PopUpWindowProps) => {
+export const PopUpWindow = ({ children }: PopUpWindowProps) => {
+  const [isOpen, setOpen] = useState(true);
   const handleCloseClick = () => {
-    setIsOpen(false);
+    setOpen(false);
   };
 
   return (
     <>
-      {isOpen ? (
-        <Window>
-          <Toolbar>
-            <img
-              src="/close.png"
-              style={{ height: "100%", marginLeft: "auto", cursor: "pointer" }}
-              onClick={handleCloseClick}
-            />
-            {/* {tools?.map(tool, i)=>(<img src={tools.src}/>)} */}
-          </Toolbar>
-        </Window>
-      ) : null}
+      <Window isOpen={isOpen}>
+        <Toolbar>
+          <img
+            src="/close.png"
+            style={{ height: "100%", marginLeft: "auto", cursor: "pointer" }}
+            onClick={handleCloseClick}
+          />
+        </Toolbar>
+        {children}
+      </Window>
     </>
   );
 };
