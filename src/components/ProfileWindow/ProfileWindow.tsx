@@ -35,6 +35,15 @@ const LogoContainer = styled.div`
   flex-direction: column;
 `;
 
+const ProfilePicture = styled.div`
+  width: 2/3;
+`;
+
+const DescriptionContainer = styled.div`
+  text-align: center;
+  color: black;
+`;
+
 export const ProfileWindow = () => {
   return (
     <PopUpWindow>
@@ -43,8 +52,28 @@ export const ProfileWindow = () => {
         <Position>Recent Computer Science Graduate</Position>
       </Header>
       <ProfileContainer>
-        <LogoContainer></LogoContainer>
+        <LogoContainer>
+          <img src="/email.png" />
+          <img src="/location.png" />
+          <img src="/instagram.png" />
+        </LogoContainer>
+        <ProfilePicture>
+          <img src="Little_Laboon.png" />
+        </ProfilePicture>
+        <LogoContainer>
+          <img src="/linkedin.png" />
+          <img src="/indeed.png" />
+          <img src="/github.png" />
+        </LogoContainer>
       </ProfileContainer>
+      <DescriptionContainer>
+        Hi! I’m a recent computer science graduate looking for experience in
+        Designing and Development. I mainly use Java but I have experience using
+        TypeScript, and ReactJS for web development. I’m passionate about the
+        gaming industry and hope to be a game designer or programmer in the long
+        run. I”m creative and resourceful and can learn things quickly. I”m
+        eager to learn whatever need be to get me to my goal. :]
+      </DescriptionContainer>
     </PopUpWindow>
   );
 };
