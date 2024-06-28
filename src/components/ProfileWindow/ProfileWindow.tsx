@@ -1,5 +1,6 @@
 import { PopUpWindow } from "../../modules";
 import styled from "styled-components";
+import { Spaces } from "../../theme";
 
 const Header = styled.div`
   display: flex;
@@ -33,15 +34,19 @@ const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: ${Spaces.lg};
+  margin: 0 ${Spaces.md} 0 ${Spaces.md};
 `;
 
 const ProfilePicture = styled.div`
   width: 2/3;
+  object-fit: contain;
 `;
 
 const DescriptionContainer = styled.div`
   text-align: center;
   color: black;
+  margin: 0 ${Spaces.lg} 0 ${Spaces.lg};
 `;
 
 export const ProfileWindow = () => {
@@ -53,17 +58,27 @@ export const ProfileWindow = () => {
       </Header>
       <ProfileContainer>
         <LogoContainer>
-          <img src="/email.png" />
-          <img src="/location.png" />
-          <img src="/instagram.png" />
+          <a href="mailto:txaypraseuth@gmail.com">
+            <img src="/email.png" height="50px" />
+          </a>
+          <img src="/location.png" height="50px" />
+          <a href="https://www.instagram.com/txayprizzle/">
+            <img src="/instagram.png" height="50px" />
+          </a>
         </LogoContainer>
         <ProfilePicture>
-          <img src="Little_Laboon.png" />
+          <img src="ProfilePicture.jpg" height="100%" width="100%" />
         </ProfilePicture>
         <LogoContainer>
-          <img src="/linkedin.png" />
-          <img src="/indeed.png" />
-          <img src="/github.png" />
+          <a href="https://www.linkedin.com/in/tammyx/">
+            <img src="/linkedin.png" height="50px" />
+          </a>
+          <a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-homepage">
+            <img src="/indeed.png" height="50px" />
+          </a>
+          <a href="https://github.com/tammyxa">
+            <img src="/github.png" height="50px" />
+          </a>
         </LogoContainer>
       </ProfileContainer>
       <DescriptionContainer>
