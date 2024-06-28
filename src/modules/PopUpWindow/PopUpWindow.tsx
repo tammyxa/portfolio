@@ -7,14 +7,15 @@ interface PopUpWindowProps {
 }
 
 const Window = styled.div<{ isOpen: boolean }>`
-  min-width: 30%;
-  min-height: 30%;
+  min-width: 10%;
+  min-height: 10%;
   background-color: ${Colors.primaryLight};
   position: absolute;
   inset: 50% auto auto 50%;
   transform: translate(-50%, -50%);
   filter: drop-shadow(1px 1px 3px ${Colors.primaryDark});
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  padding: 0 0 ${Spaces.lg} 0;
 `;
 
 const Toolbar = styled.div`
@@ -25,6 +26,7 @@ const Toolbar = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: ${Spaces.sm};
+  margin-bottom: ${Spaces.lg};
 `;
 
 export const PopUpWindow = ({ children }: PopUpWindowProps) => {
