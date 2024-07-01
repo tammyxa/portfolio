@@ -86,7 +86,7 @@ export const ProfileWindow = () => {
         Designing and Development. I mainly use Java but I have experience using
         TypeScript, and ReactJS for web development. I’m passionate about the
         gaming industry and hope to be a game designer or programmer in the long
-        run. I”m creative and resourceful and can learn things quickly. I”m
+        run. I”m creative and resourceful and can learn things quickly. I'm
         eager to learn whatever need be to get me to my goal. :]
       </DescriptionContainer>
     </PopUpWindow>
