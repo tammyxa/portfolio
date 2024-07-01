@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Colors, Spaces } from "../../theme";
 import { useState } from "react";
 import { ProfileWindow } from "../ProfileWindow";
+import { ResumeWindow } from "../ResumeWindow";
 
 interface DesktopIconProps {
   icon: string;
@@ -42,8 +43,10 @@ export const DesktopIcon = ({ icon, name }: DesktopIconProps) => {
         <img src={icon}></img>
         <span>{name}</span>
       </DesktopIconContainer>
-      {open && application && application === "Profile" ? (
+      {open && application === "Profile" ? (
         <ProfileWindow />
+      ) : open && application === "Resume" ? (
+        <ResumeWindow />
       ) : null}
     </>
   );
