@@ -3,6 +3,7 @@ import { Colors, Spaces } from "../../theme";
 import { useState } from "react";
 import { ProfileWindow } from "../ProfileWindow";
 import { ResumeWindow } from "../ResumeWindow";
+import { AchievementsWindows } from "../AchievementsWindow";
 
 interface DesktopIconProps {
   icon: string;
@@ -47,6 +48,8 @@ export const DesktopIcon = ({ icon, name }: DesktopIconProps) => {
         <ProfileWindow />
       ) : open && application === "Resume" ? (
         <ResumeWindow />
+      ) : open && application === "Achievements" ? (
+        <AchievementsWindows />
       ) : null}
     </>
   );

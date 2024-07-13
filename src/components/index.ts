@@ -1,3 +1,4 @@
+export * from "./Achievement";
 export * from "./AchievementsWindow";
 export * from "./Button";
 export * from "./ProfileWindow";
