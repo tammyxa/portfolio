@@ -1,5 +1,5 @@
 import "./App.css";
-import { Taskbar, DesktopIcon } from "./components";
+import { Ditto, DesktopIcon } from "./components";
 import styled from "styled-components";
 
 const DesktopContainer = styled.div`
@@ -15,7 +15,7 @@ export default function Home() {
         <DesktopIcon icon="/certificate.png" name="Achievements" />
         <DesktopIcon icon="/about.png" name="About" />
       </DesktopContainer>
-      <Taskbar />
+      <Ditto />
     </>
   );
 }
